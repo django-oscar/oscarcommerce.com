@@ -33,11 +33,12 @@ Running a local server
 
 Change directory into the `django-oscar` directory, and build by::
 
-    jekyll --server --base-url=""
+    jekyll --server --base-url="" --auto
     
 where ``--base-url`` is an option to override the baseurl setting in
 ``_config.yml``. This setting is used in the templates as the placeholder ``{{
-site.baseurl }}``
+site.baseurl }}``.  The ``--auto`` option ensures the server restarts when a 
+change is made.
 
 The generated site is available at http://localhost:4000/
 
