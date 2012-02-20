@@ -69,10 +69,10 @@ python setup.py develop</code>
 	contain the templates and sample data used in the sample shop.</p>
     <p>2. Create the database (defaults to using SQLite) and import sample products and images.</p>
     <code class="block">cd sandbox
-./manage.py syncdb --noinput
-./manage.py migrate
-./manage.py oscar_import_catalogue data/books-catalogue.csv
-./manage.py oscar_import_catalogue_images data/books-images.tar.gz</code>
+./manage.py syncdb --noinput --settings=settings_simple
+./manage.py migrate --settings=settings_simple
+./manage.py oscar_import_catalogue data/books-catalogue.csv --settings=settings_simple
+./manage.py oscar_import_catalogue_images data/books-images.tar.gz --settings=settings_simple</code>
 	<p>Now run Django's server:</p>
 	<code class="block">./manage.py runserver</code>
 	<p>and you can browse the shop at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></p>
