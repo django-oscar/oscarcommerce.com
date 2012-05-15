@@ -73,7 +73,7 @@ python setup.py develop</code>
 ./manage.py migrate --settings=settings_simple
 ./manage.py oscar_import_catalogue data/books-catalogue.csv --settings=settings_simple
 ./manage.py oscar_import_catalogue_images data/books-images.tar.gz --settings=settings_simple
-./manage.py loaddata countries.json fixtures/pages.json</code>
+./manage.py loaddata countries.json fixtures/pages.json --settings=settings_simple</code>
 	<p>Now run Django's server:</p>
 	<code class="block">./manage.py runserver --settings=settings_simple</code>
 	<p>and you can browse the shop at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
