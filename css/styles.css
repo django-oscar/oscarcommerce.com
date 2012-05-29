@@ -200,7 +200,7 @@ hr:before {
 }
 
 #page_content {
-	padding-top: 8em;
+	padding-top: 5.8em;
 }
 
 /*** Header ***/
@@ -219,7 +219,7 @@ header h1 {
 	font-weight: 700;
 	color: #5eaba6;
 	text-shadow: 1px 1px 1px 1px #fff;
-	margin-top: 110px;
+	margin-top: 72px;
 	width: 500px;
 	display: block;
 	float: left;
