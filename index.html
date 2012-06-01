@@ -110,7 +110,7 @@ python setup.py develop</code>
     {% if site.posts != empty %}
 	<ol id="posts_list" class="hfeed">
 	    {% for post in site.posts %}
-        {% capture post_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
+        {% capture post_url %}{{ post.url }}{% endcapture %}
     	<li>
     		<article class="hentry">
     			<header>
