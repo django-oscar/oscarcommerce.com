@@ -1,166 +1,85 @@
 ---
 layout: default
 title: Oscar - Domain-driven e-commerce for Django
+container_class: home
 ---
-<section id="synopsis" class="body">
-<p><span class="synopsis">Django-Oscar is an e-commerce framework for <a href="https://www.djangoproject.com/">Django</a>, designed
-	to support <a href="http://en.wikipedia.org/wiki/Domain-driven_design">domain-driven design</a>.</span></p>
-	</span></p>
 
-	<p>Oscar was built from the ground up to make very few assumptions about
-	your domain, allowing virtually any part of the framework to be extended
-	and customised.  In this way, your domain can be accurately modelled -
-	complex business rules can be captured in an elegant and cohesive way.</p>
-
-	<p>For a developer, the key features are:</p>
+<h1 class="main"><span>Oscar is an <em>open-source ecommerce framework for Django.</em></span></h1>
+<div class="row buttons clearfix">
+	<div class="panel bg-5">
+		<p>Oscar was built from the ground up to make very few assumptions about your project, allowing virtually any part of the framework to be extended and customised. In this way, complex business rules can be solved in an elegant and cohesive way.</p>
+	</div>
 	<ul>
-		<li>An extensible core - any class can be overridden, replaced and extended.  This is 
-		the key feature that allows any domain to be captured accurately in the codebase - no work-arounds!</li>
-		<li>A well-designed set of models built on the experience of many e-commerce projects, both large and small.</li>
-		<li><a href="http://django-oscar.readthedocs.org/">Comprehensive documentation</a> including recipes for solving common problems.</li>
-		<li>Extensive test suite.</li>
+		<li><a href="http://sandbox.oscar.tangentlabs.co.uk" class="bg-1" title="Try the demo store">Try the demo store</a></li>
+		<li><a href="http://github.com/tangentlabs/django-oscar/" class="bg-2" title="View the source code">View the source code</a></li>
+		<li><a href="http://django-oscar.readthedocs.org/en/latest/" class="bg-3" title="Read the documentation">Read the documentation</a></li>
 	</ul>
-
-	<p>The core of oscar is deliberately kept lean.  The key features that oscar ships with are:</p>
-	<ul>
-		<li>A range of merchandising blocks for promoting your products throughout your site.  This 
-		can easily be added to or extended.</li>
-		<li>Highly sophisticated offers and vouchers system, supporting virtually any offer type
-		you can think of.</li>
-		<li>A comprehensive dashboard for managing products, orders, offers, vouchers and merchandising.</li>
-		<li>Support for split-payment orders, complicated order fulfilment pipelines, anonymous checkout.</li>
-	</ul>
-
-	<p>The key feature of oscar is that it is easy to extend and implement your business rules
-	in a clean, cohesive way.  For example, here are a few of the requirements that have been 
-	developed on top of oscar:</p>
-
-	<ul>
-		<li>A checkout that allows a single order to be paid by up to 9 different payment sources, using multiple
-			payment partners.</li>
-		<li>Sales representatives are able to place orders on behalf of their customers, using
-		    allocated budgets, managed within the system</li>
-		<li>Integration with a series of SAP webservices to provide catalogue and inventory updates</li>
-		<li>Handling of a catalogue of around 15 million products, with stock provided by a range of
-			international partners.  Stock and biblio updates happening continuous using a Celery-driven backend.</li>
-		<li>Sophisticated access-control rules governing which customers can see which products.</li>
-	</ul>
-
-	<p>Django-Oscar was created by <a href="http://codeinthehole.com">David Winterbottom</a> (<a
-		href="https://twitter.com/codeinthehole">@codeinthehole</a>), and is
-	developed and maintained by <a href="http://www.tangentlabs.co.uk/">Tangent Labs</a>, 
-	a London-based digital agency.  It is used in production around the world to sell products
-	from beer mats to iPads.</p>
-	<hr />
-</section>
-
-<section id="takeapeek" class="body">
-	<h1>Take a peek</h1>
-	<p>Oscar ships with a sample shop that you can have up and running in
-	two minutes.  Note that you need to have <a href="http://www.pip-installer.org/en/latest/index.html">pip</a> and
-	<code>libjpeg</code>.</p>
-	
-	<p>1. Create a virtual environment and install oscar:</p>
-	<code class="block">mkvirtualenv oscar
-git clone git://github.com/tangentlabs/django-oscar.git
-cd django-oscar
-python setup.py develop</code>
-	<p>We use the version from Github rather than PyPi as the official package doesn't 
-	contain the templates and sample data used in the sample shop.</p>
-    <p>2. Create the database (defaults to using SQLite) and import sample products and images.</p>
-    <code class="block">cd sandbox
-./manage.py syncdb --noinput --settings=settings_simple
-./manage.py migrate --settings=settings_simple
-./manage.py oscar_import_catalogue data/books-catalogue.csv --settings=settings_simple
-./manage.py oscar_import_catalogue_images data/books-images.tar.gz --settings=settings_simple
-./manage.py loaddata countries.json fixtures/pages.json --settings=settings_simple</code>
-	<p>Now run Django's server:</p>
-	<code class="block">./manage.py runserver --settings=settings_simple</code>
-	<p>and you can browse the shop at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
-	<p>The sample shop is a vanilla install of oscar - nothing is extended or customised - what you see
-	is just the core functionality.  Hence many domain-specific features, such as shipping charges
-	and payment methods, are not specified.  For a real project with its own business logic, oscar
-	makes it easy to extend and customise its core to meet the requirements of your domain.
-	<hr />
-</section>
-
-<section id="divein" class="body">
-	<h1>Dive in</h1>
-	<p>To use oscar on a real project, it's best to install from PyPi</p>
-	<code class="block">pip install django-oscar</code>
-	<p>and use the guides in the <a href="http://django-oscar.readthedocs.org/">documentation</a> on how to customise oscar to suit
-	your domain.</p>
-	<hr />
-</section>
-
-<section id="extensions" class="body">
-	<h1>Extensions</h1>
-	<p>The following libraries complement and extend oscar:</p>
-	<ul>
-		<li><a href="https://github.com/tangentlabs/django-oscar-datacash">django-oscar-datacash</a> - integration with the payment gateway, DataCash</li>
-		<li><a href="https://github.com/tangentlabs/django-oscar-paypal">django-oscar-paypal</a> - integration with PayPal</li>
-		<li><a href="https://github.com/tangentlabs/django-oscar-gocardless">django-oscar-gocardless</a> - integration with the GoCardless service</li>
-	</ul>
-	<p>More to come soon!</p>
-	<hr />
-</section>
-
-<section id="news" class="body">
-	<h1>News</h1>
-    {% if site.posts != empty %}
-	<ol id="posts_list" class="hfeed">
-	    {% for post in site.posts %}
-        {% capture post_url %}{{ post.url }}{% endcapture %}
-    	<li>
-    		<article class="hentry">
-    			<header>
-    				<h2 class="entry_title">
-    				    <a href="{{ post_url }}" rel="bookmark" title="Permalink to {{ post.title }}">{{ post.title }}</a>
-    			    </h2>
-    			</header>
-    			<abbr class="published" title="{{ post.date }}">{{ post.date | date_to_string }}</abbr>
-    			<!--
-    			<address class="vcard author">
-    				Posted by <a class="author" href="#">{author}</a>
-    			</address>
-    			-->
-    			<div class="entry_content">
-    				<p>{{ post.content | strip_html | truncatewords:"30" }} <a href="{{ post_url }}">Read More &raquo;</a></p>
-    			</div>
-    		</article>
-    	</li>
-        {% endfor %}
-	</ol>
-	{% endif %}
-	<p>For micro-updates, follow <a href="https://twitter.com/codeinthehole">@codeinthehole</a> on twitter.  
-	Mailing list and IRC to come.</p>
-	<hr />
-</section>
-
-<section id="roadmap" class="body">
-	<h1>Roadmap</h1>
-	<p>We're currently working the following features:</p>
+</div>
+<div class="row panels clearfix">
+	<div class="panel bg-5">
+		<h1>Why choose Oscar:</h1>
+		<ul>
+			<li>An extensible core - any class can be overridden, replaced and extended. </li>
+			<li>This is the key feature that allows any project to be captured accurately in the codebase - no work-arounds!</li>
+			<li>A well-designed set of models built on the experience of many e-commerce projects, both large and small.</li>
+			<li>Comprehensive documentation including recipes for solving common problems.</li>
+			<li>Extensive test suite.</li>
+		</ul>
+	</div>
+	<div class="panel bg-5">
+		<h1>Problems Oscar is already solving:</h1>
+		<ul>
+			<li>A checkout that allows a single order to be paid by up to 9 different payment sources, using multiple payment partners.</li>
+			<li>Sales representatives are able to place orders on behalf of their customers, using allocated budgets, managed within the system.</li>
+			<li>Integration with a series of SAP webservices to provide catalogue and inventory updates.</li>
+			<li>Handling of a catalogue of around 15 million products, with stock provided by a range of international partners. Stock and biblio updates happening continuous using a Celery-driven backend.</li>
+			<li>Sophisticated access-control rules governing which customers can see which products.</li>
+			<li>Manages a 13 million catalogue supported by 100+ suppliers for a single project.</li>
+		</ul>
+	</div>
+</div>
+<aside class="row clearfix">
+	<img src="assets/images/ribbon.png" alt="Whats New?" />
+	<hgroup>
+		<h1>Roadmap</h1>
+		<h2>We're currently working<br>on the following features:</h2>
+	</hgroup>
 	<ul>
 		<li>A comprehensive dashboard including product, offer, order and content management.</li>
-		<li>A new extension, django-oscar-bootstrap - A Vagrant-backed project which provides a fully set 
-		up virtual machine, ready to run a django-oscar site.</li>
+		<li>A new extension, django-oscar-bootstrap - A Vagrant-backed project which provides a fully set up virtual machine, ready to run a django-oscar site.</li>
 	</ul>
-	<hr />
-</section>
-
-<section id="contributing" class="body">
-	<h1>Contributing</h1>
-	<p>The source code can be <a href="https://github.com/tangentlabs/django-oscar">found on Github</a>.</p>
-	<p>First install oscar as <a href="#takeapeek">specified above</a>.  You then need to install the 
-	testing requirements.</p>
-	<code class="block">pip install -r requirements.txt</code>
-	<p>The test suite can be run using:</p>
-	<code class="block">./run_tests.py</code>
-	<p>Generate a HTML coverage report (in htmlcov/index.html) using</p>
-	<code class="block">./run_tests.py --coverage</code>
-	<p>To report an issue, use the <a href="https://github.com/tangentlabs/django-oscar/issues">issue tracker</a></p> 
-</section>
-
-
-
-
+	<a href="roadmap.html" title="See the full roadmap" class="bg-2">See the full roadmap</a>
+</aside>
+<footer>
+	<div id="ticker" class="row bg-2">
+		<div id='ticker1' class="ticker">
+			<ul>
+				<li><span class="triangle-isosceles right">Watchers</span>217</li>
+				<li><span class="triangle-isosceles right">Forks</span>54</li>
+				<li><span class="triangle-isosceles right">Downloads from PyPI</span>13707</li>
+				<li><span class="triangle-isosceles right">Contributors</span>32</li>
+				<li><span class="triangle-isosceles right">Commits on master</span>7045</li>
+				<li><span class="triangle-isosceles right">Pull requests</span>99</li>
+				<li><span class="triangle-isosceles right">Mailing list topics</span>4</li>
+				<li><span class="triangle-isosceles right">Number of projects in production</span>3</li>
+				<li><span class="triangle-isosceles right">Number of products</span>12,274,631</li>
+				<li><span class="triangle-isosceles right">Number of orders processed</span>90928</li>
+				<li><span class="triangle-isosceles right">Total revenue processed</span>&pound;2m+</li>
+			</ul>
+		</div>
+	</div>
+	<div class="logos-row clearfix">
+		<div class="logos">
+			<h1>Using Oscar:</h1>
+			<img src="assets/images/logos1.jpg" alt="" />
+		</div>
+		<div class="logos">
+			<h1>Extensions:</h1>
+			<img src="assets/images/logos2.jpg" alt="" />
+		</div>
+		<div class="logos">
+			<h1>Integrations:</h1>
+			<img src="assets/images/logos3.jpg" alt="" />
+		</div>
+	</div>
+</footer>

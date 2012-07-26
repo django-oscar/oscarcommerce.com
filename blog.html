@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog / Oscar - Domain-driven e-commerce for Django
+container_class: blog
+---
+<h1 class="main"><span><em>Latest news, views and tips from Team Oscar</em></span></h1>
+
+{% for post in site.posts %}
+{% capture post_url %}{{ post.url }}{% endcapture %}
+<div class="news-item-head bg-5 clearfix">
+	<hgroup>
+	<h1>{{ post.date | date_to_string }}</h1>
+		<h2>/ {{ post.title }}</h2>
+		<h3>{{ post.author }}</h3>
+	</hgroup>
+</div>
+<div class="news-item-body bg-5 clearfix">
+	{{ post.content }}
+</div>
+{% endfor %}
