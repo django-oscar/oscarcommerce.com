@@ -76,26 +76,22 @@ container_class: home
 <script type="text/javascript">
 	function showStats(data) {
 		// Build dict of titles with keys
-		var headerRow = data['feed']['entry'][0];
+		var headerRow = data['feed']['entry'][0],
+			dataRow = data['feed']['entry'].pop();
 		var metrics = {};
 		for (key in headerRow) {
 			if (key.search(/^gsx\$/) === 0) {
 				var name = headerRow[key]['$t'];
 				if (name == 'Date') continue;
-				metrics[key] = {'name': headerRow[key]['$t'], 'value': null};
+				metrics[key] = {
+					'name': headerRow[key]['$t'], 
+					'value': dataRow[key]['$t']
+				}
 			}
 		}
-		// Update with latest data
-		var dataRow = data['feed']['entry'].pop();
-		for (key in dataRow) {
-			if (metrics[key] != undefined) {
-				metrics[key]['value'] = dataRow[key]['$t'];
-			}
-		}
-		// Inject ticker data
+		// Inject data and start the ticker
 		for (key in metrics) {
 			$li = $('<li><span class="triangle-isosceles right">' + metrics[key]['name'] + '</span> ' + metrics[key]['value'] + '</li>');
-			console.log(key, $li)
 			$('#ticker_data').append($li);
 		}
 		$('#ticker1').ticker({pxpersec:100});
