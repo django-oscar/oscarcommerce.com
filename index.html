@@ -53,18 +53,7 @@ container_class: home
 <footer>
 	<div id="ticker" class="row bg-2">
 		<div id='ticker1' class="ticker">
-			<ul>
-				<li><span class="triangle-isosceles right">Watchers</span>217</li>
-				<li><span class="triangle-isosceles right">Forks</span>54</li>
-				<li><span class="triangle-isosceles right">Downloads from PyPI</span>13707</li>
-				<li><span class="triangle-isosceles right">Contributors</span>32</li>
-				<li><span class="triangle-isosceles right">Commits on master</span>7045</li>
-				<li><span class="triangle-isosceles right">Pull requests</span>99</li>
-				<li><span class="triangle-isosceles right">Mailing list topics</span>4</li>
-				<li><span class="triangle-isosceles right">Number of projects in production</span>3</li>
-				<li><span class="triangle-isosceles right">Number of products</span>12m+</li>
-				<li><span class="triangle-isosceles right">Number of orders processed</span>10k+</li>
-				<li><span class="triangle-isosceles right">Total revenue processed</span>&pound;2m+</li>
+			<ul id="ticker_data">
 			</ul>
 		</div>
 	</div>
@@ -83,3 +72,33 @@ container_class: home
 		</div>
 	</div>
 </footer>
+
+<script type="text/javascript">
+	function showStats(data) {
+		// Build dict of titles with keys
+		var headerRow = data['feed']['entry'][0];
+		var metrics = {};
+		for (key in headerRow) {
+			if (key.search(/^gsx\$/) === 0) {
+				var name = headerRow[key]['$t'];
+				if (name == 'Date') continue;
+				metrics[key] = {'name': headerRow[key]['$t'], 'value': null};
+			}
+		}
+		// Update with latest data
+		var dataRow = data['feed']['entry'].pop();
+		for (key in dataRow) {
+			if (metrics[key] != undefined) {
+				metrics[key]['value'] = dataRow[key]['$t'];
+			}
+		}
+		// Inject ticker data
+		for (key in metrics) {
+			$li = $('<li><span class="triangle-isosceles right">' + metrics[key]['name'] + '</span> ' + metrics[key]['value'] + '</li>');
+			console.log(key, $li)
+			$('#ticker_data').append($li);
+		}
+		$('#ticker1').ticker({pxpersec:100});
+	}
+</script>
+<script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/0AorKgPwlJ_RPdHV4U0V6UVhZUmwwQUN2bDcwZ1RQaVE/od6/public/values?alt=json-in-script&callback=showStats"></script>
