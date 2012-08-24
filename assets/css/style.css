@@ -292,9 +292,11 @@ ASIDE{ background: #e8e8e8; border: solid 10px #fff; border-width: 1.04166666666
 .news-item-head{ padding: 25px 5.88235294117647% 22px; line-height: 1; margin-bottom: 7px; }
 	.news-item-head H1{ color: #0d84ae; display: inline; font-family: "AllerRegular"; font-size: 1.75em; }
 	.news-item-head H2{ color: #000; display: inline; font-family: "AllerBold"; font-size: 1.75em; }
-	.news-item-head H3{ display: block; text-transform: uppercase; color: #333; font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 0.75em; }
+	.news-item-head H3{ display: block; text-transform: uppercase; color: #333; font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif; font-size: 0.75em; margin-top: 0.4em; }
 .news-item-body{ padding: 30px 5.88235294117647% 35px; margin-bottom: 21px; }
-	.news-item-body P{ width: 80%; font-size: 0.8125em; }
+	.news-item-body P{ width: 80%; font-size: 0.8125em; margin-top:1em;}
+	.news-item-body LI{ width: 80%; font-size: 0.8125em; }
+	.news-item-body UL{ margin-top: 1em; list-style-type: circle;}
 
 	
 FOOTER{  }
