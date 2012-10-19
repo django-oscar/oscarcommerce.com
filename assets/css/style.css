@@ -124,7 +124,7 @@ A.bg-3,
 NAV{ margin: 0 0 28px; }
 	NAV > A{ float: left; width: 20%; max-height: 119px; } /* 190/950 = 0.2 */
 		NAV > A IMG{ max-width: 100%; width: auto; }
-	NAV UL{ background-color: #333; font-size: 0.9375em; float: right; width: 34%; text-align: center; margin-top: 39px; padding: 0; } /* 480/950 = 0.5052631578947368 */
+	NAV UL{ background-color: #333; font-size: 0.9375em; float: right; width: 22%; text-align: center; margin-top: 39px; padding: 0; } /* 480/950 = 0.5052631578947368 */
 	NAV LI{ display: inline; }
 		NAV LI A{ color: #e0861a; text-decoration: none; font-weight: normal; font-size: 0.9375em; line-height: 40px; padding: 0 2.91666666666667%;
 				 -webkit-transition: color 0.3s ease-in-out;
