@@ -87,10 +87,12 @@ container_class: home
 				// Ignore some columns
 				if (/date/i.test(name)) continue;
 				if (/revenue/i.test(name)) continue;
-				metrics[key] = {
-					'name': headerRow[key]['$t'], 
-					'value': dataRow[key]['$t']
-				}
+                if (key in dataRow) {
+                    metrics[key] = {
+                        'name': headerRow[key]['$t'], 
+                        'value': dataRow[key]['$t']
+                    }
+                } 
 			}
 		}
 		// Inject data and start the ticker
