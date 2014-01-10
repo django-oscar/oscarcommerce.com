@@ -7,16 +7,15 @@ container_class: home
 <h1 class="main"><span>Oscar is an <em>open-source ecommerce framework for Django.</em></span></h1>
 <div class="row buttons clearfix">
 	<div class="panel bg-5">
-		<p>Oscar was built from the ground up to make very few assumptions
-		   about your project, allowing virtually any part of the framework to
-		   be extended and customised. In this way, complex business rules can
+		<p>Oscar makes few assumptions about your project, allowing virtually any part of the framework to
+		   be extended and customised.  In this way, complex business rules can
 		   be captured in an elegant and cohesive way.</p>
 	</div>
 	<ul>
         <li><a href="http://latest.oscarcommerce.com" class="bg-1" title="Try the sandbox">Browse the sandbox</a></li>
-		<li><a href="http://demo.oscarcommerce.com" class="bg-1" title="Try the demo store">Explore the demo store</a></li>
-		<li><a href="http://github.com/tangentlabs/django-oscar/" class="bg-2" title="View the source code">View the source code</a></li>
-		<li><a href="http://django-oscar.readthedocs.org/en/latest/" class="bg-3" title="Read the documentation">Read the documentation</a></li>
+		<li><a href="http://demo.oscarcommerce.com" class="bg-2" title="Try the demo store">Explore the demo store</a></li>
+		<li><a href="http://github.com/tangentlabs/django-oscar/" class="bg-1" title="View the source code">View the source code</a></li>
+		<li><a href="http://django-oscar.readthedocs.org/en/latest/" class="bg-2" title="Read the documentation">Read the documentation</a></li>
 	</ul>
 </div>
 <div class="row panels clearfix">
@@ -53,58 +52,6 @@ container_class: home
         }
     </style>
 </div>
-
-<footer>
-	<div id="ticker" class="row bg-2">
-		<div id='ticker1' class="ticker">
-			<ul id="ticker_data">
-			</ul>
-		</div>
-	</div>
-	<div class="logos-row clearfix">
-		<div class="logos">
-			<h1>Using Oscar:</h1>
-			<img src="assets/images/logos1.jpg" alt="" />
-		</div>
-		<div class="logos">
-			<h1>Extensions:</h1>
-			<img src="assets/images/logos2.jpg" alt="" />
-		</div>
-		<div class="logos">
-			<h1>Integrations:</h1>
-			<img src="assets/images/logos3.jpg" alt="" />
-		</div>
-	</div>
-</footer>
-
-<script type="text/javascript">
-	function showStats(data) {
-		var headerRow = data['feed']['entry'][0],
-			dataRow = data['feed']['entry'].pop();
-		var metrics = {};
-		for (key in headerRow) {
-			if (key.search(/^gsx\$/) === 0) {
-				var name = headerRow[key]['$t'];
-				// Ignore some columns
-				if (/date/i.test(name)) continue;
-				if (/revenue/i.test(name)) continue;
-                if (key in dataRow) {
-                    metrics[key] = {
-                        'name': headerRow[key]['$t'], 
-                        'value': dataRow[key]['$t']
-                    }
-                } 
-			}
-		}
-		// Inject data and start the ticker
-		for (key in metrics) {
-			$li = $('<li><span class="triangle-isosceles right">' + metrics[key]['name'] + '</span> ' + metrics[key]['value'] + '</li>');
-			$('#ticker_data').append($li);
-		}
-		$('#ticker1').ticker({pxpersec:100});
-	}
-</script>
-<script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/0AorKgPwlJ_RPdHV4U0V6UVhZUmwwQUN2bDcwZ1RQaVE/od6/public/values?alt=json-in-script&callback=showStats"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
