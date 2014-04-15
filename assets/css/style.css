@@ -167,6 +167,11 @@ H1.main{ color: #fff; padding: 60px 5.88235294117647% 70px; margin: 0 0 35px; ba
 	.panels .panel LI{ margin: 0 0 5px; }
 .panels .panel:FIRST-OF-TYPE{ width: 25.26315789473684%; float: left; } /* 240/950 = 0.2526315789473684 */
 
+.bigpanel { padding: 30px 40px; }
+.bigpanel H1 {  30px 40px; }
+.bigpanel a { color: #d1550a; }
+.bigpanel .getintouch { display: block; color: #d1550a; }
+
 ASIDE{ background: #e8e8e8; border: solid 10px #fff; border-width: 1.04166666666667%; position: relative; padding: 23px 30px; }/* 10/960 = 0.0104166666666667 */
 	ASIDE IMG{ position: absolute; top: -14px; left: -17px; z-index: 10; }
 	ASIDE HGROUP{ width: 166px; margin-left: 40px; border-right: solid 1px #9d9d9d; float: left; }
