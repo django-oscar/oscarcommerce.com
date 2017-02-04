@@ -1,0 +1,78 @@
+- name: Tata Group
+  url: http://www.landmarkonthenet.com/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/landmark.thumb.png
+
+- name: Carlsberg
+  url:
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/carlsberg.cch.png
+
+- name: Chocolate Box
+  url: https://www.chocolatebox.com.au/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/chocolatebox.thumb.png
+
+- name: The UK Labour party
+  url: http://shop.labour.org.uk/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/labourshop.thumb.png
+
+- name: Meridian Audio
+  url: http://www.meridian-audio.co.uk/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/meridian.thumb.png
+
+- name: Which Rightchoice
+  url: http://www.whichrightchoice.com/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/rightchoice.thumb.png
+
+- name: Freetix
+  url: http://www.freetix.com.au/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/freetix.thumb.png
+
+- name: Nails inc US
+  url: http://www.nailsinc.com/us/
+  agency: Tangent
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/nailsinc.thumb.png
+
+
+
+
+
+- name: Dolbeau
+  url: http://www.dolbeau.ca
+  agency:
+  screenshot: https://raw.githubusercontent.com/django-oscar/django-oscar/master/docs/images/screenshots/dolbeau.thumb.png
+
+- name: Audio App
+  url: https://audioapp.pl
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/audioapp.thumb.png
+
+- name: Anything Gift
+  url: http://www.anythinggift.co.uk
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/anythinggift.thumb.png
+
+- name: Partecipa Cards
+  url: http://www.partecipacards.com
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/partecipacards.thumb.png
+
+- name: Chiyome
+  url: https://chiyome.com
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/chiyome.thumb.png
+
+- name: Bike Parts Market
+  url: https://www.bikepartsmarket.com
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/bpm.thumb.png
+
+- name: Dadagraphix
+  url: https://dadagraphix.com
+  agency:
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/dadagraphix.thumb.png

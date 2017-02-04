@@ -272,3 +272,28 @@ ul.buttons li:LAST-CHILD {
     margin-right: 50px;
     top: 4px;
 }
+
+.project-card {
+    background-color: #fff;
+    width: 100%;
+    padding-top: 15px;
+    height: 330px;
+    margin-bottom: 30px;
+}
+
+.project-card img {
+    height: 260px;
+    display: block;
+    margin: 0 auto;
+
+}
+.project-card span {
+    display: block;
+    text-align: center;
+}
+
+.project-card span.item-agency {
+    color: #aeaeae;
+    display: block;
+    text-align: center;
+}

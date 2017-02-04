@@ -1,0 +1,37 @@
+---
+layout: default
+title: Cases / Oscar - Domain-driven e-commerce for Django
+container_class: cases
+---
+<h1 class="main"><span>Case studies, <em>made with Oscar</em></span></h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block--container block--container-white block--container-large">
+            <p>
+                Oscar is still in active development but is used in production
+                by a range of companies, from large multinationals to small,
+                boutique stores.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for item in site.data.sites %}
+    <div class="col-md-4 col-sm-6">
+        <div class="project-card">
+            <a href="{{ item.url }}"><img src="{{ item.screenshot }}"></a>
+            <span>
+                <a href="{{ item.url }}">{{ item.name }}</a>
+            </span>
+            {% if item.agency %}
+            <span class="item-agency">
+                by {{ item.agency }}
+            </span>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
