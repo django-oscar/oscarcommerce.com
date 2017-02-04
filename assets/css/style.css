@@ -52,13 +52,7 @@ Backgrounds
     box-sizing: content-box;
 }
 
-BODY{ line-height: 1.5; font-family: "AllerRegular", Arial, sans-serif; background: transparent url(../images/bg_page.jpg) fixed no-repeat top; background-size: cover; }
-#scroll-wrapper{ background: transparent url(../images/bg_page.jpg) fixed no-repeat top; width: 100%; height: 100%; padding: 26px 0 100px; position: relative;
-	 -webkit-background-size: cover;
-	 -moz-background-size: cover;
-	 -o-background-size: cover;
-	 background-size: cover;
-	 }
+BODY { line-height: 1.5; font-family: "AllerRegular", Arial, sans-serif; background-color: #044961; margin-top: 40px; }
 #container{ width: 67.85714285714286%; max-width: 960px; min-width: 960px; margin: 0 auto; padding: 0 0.52631578947368%; }
 
 /* IE background cover code:
