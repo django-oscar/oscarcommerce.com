@@ -1,0 +1,274 @@
+/* CSS Document */
+
+/**********************
+Text (headings/paragraphs)
+
+#000    // black
+#fff	// white
+#e0861a // orange
+#0d84ae // blue
+#046085 // dark blue
+
+Backgrounds
+
+#e0861a // orange      // .bg-1
+#333    // dark grey   // .bg-2
+#0d84ae // blue        // .bg-3
+#e8e8e8 // light grey  // .bg-4
+#fff    // white       // .bg-5
+#b82791 // pink        // .bg-6
+#20ae19 // green       // .bg-7
+#d1550a // dark orange // .bg-8
+**********************/
+
+@font-face {
+    font-family: 'AllerRegular';
+    src: url('../fonts/aller_rg-webfont.eot') format('eot');
+    src: url('../fonts/aller_rg-webfont.svg#AllerRegular') format('svg'),
+		 url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	font-smooth: always;
+}
+@font-face {
+    font-family: 'AllerBold';
+    src: url('../fonts/aller-webfont.eot?') format('eot');
+    src: url('../fonts/aller-webfont.svg#AllerBold') format('svg'),
+		 url('../fonts/aller-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller-webfont.woff') format('woff'),
+         url('../fonts/aller-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	font-smooth: always;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+
+body {
+    line-height: 2.0rem;
+    font-family: "AllerRegular", Arial, sans-serif;
+    background-color: #044961;
+    margin-top: 40px;
+}
+
+/* Buttons */
+.btn {
+    border: 0px;
+    border-radius: 0px;
+}
+
+.btn-primary {
+    background-color: #e0861a;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #fff;
+    color: #e0861a;
+}
+
+.btn-default {
+    background-color: #333;
+    color: #e0861a;
+}
+.btn-default:hover,
+.btn-default:focus {
+	background-color: #fff;
+    color: #0d84ae;
+}
+
+
+nav .navbar-nav {
+    float: right;
+    margin-right: 0px;
+    background-color: #333;
+}
+nav .navbar-nav li a {
+    background-color: #333;
+    color: #e0861a;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.4rem;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+nav .navbar-nav li:hover,
+nav .navbar-nav li:focus {
+    background-color: #333;
+}
+nav .navbar-nav li a:hover,
+nav .navbar-nav li a:focus {
+    color: #fff;
+    background-color: #333;
+}
+
+
+h1 {
+    color: #fff;
+    padding: 55px;
+    margin: 0 0 35px;
+    font: normal normal normal 4.7rem/53px "AllerBold", Arial, sans-serif;
+}
+
+h1.main {
+    background: #0d84ae;
+}
+
+h1.dark {
+    background: #333;
+}
+h1.main em {
+    background: #333;
+    color: #e0861a;
+    font-style: normal;
+}
+
+h2 {
+    color: #046085;
+    margin: 0px;
+    font: normal normal normal 2.2rem/53px "AllerBold", Arial, sans-serif;
+}
+
+.block--container {
+    margin-bottom: 35px;
+}
+.block--container-white {
+    background-color: white;
+    padding: 30px 40px;
+    height: 100%;
+}
+.block--container-dark {
+    background-color: #333;
+    padding: 30px 40px;
+    height: 100%;
+}
+.block--container a {
+    color: #d1550a;
+    text-decoration: underline;
+}
+
+.block--container h1 {
+    font-size: 2.00rem;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.block--container ul {
+    padding: 0 0 0 15px;
+    font-size: 1.3rem;
+    list-style-type: disc;
+}
+.block--container li {
+    margin: 0 0 5px;
+}
+.block--container-large p {
+    color: #046085;
+    padding: 15px 0px;
+    margin: 0;
+    font: normal normal bold 2.00rem/3rem "AllerBold", Arial, sans-serif;
+}
+
+ul.buttons li {
+    margin: 0 0 0.75em;
+    text-align: center;
+}
+ul.buttons li a {
+    display: block;
+    text-decoration: none;
+    font-family: "AllerBold";
+    line-height: 3.9;
+}
+ul.buttons li:LAST-CHILD {
+    margin: 0;
+}
+
+
+/*
+ * Contact page
+ */
+.contact-options .option span {
+    color: #fff;
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact .contact-options .option a {
+    background-color: #0d84ae;
+    color: #fff;
+    display: block;
+    font-family: "AllerBold";
+    font-size: 1.8rem;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.contact-options .option a:hover {
+    background-color: #fff;
+    color: #0d84ae;
+}
+
+.option a[title $="Join the mailing list"]{
+    background: url(../images/contact_mailing-list.png) 45px center no-repeat;
+    text-indent: 5px;
+}
+.option a:hover[title $="Join the mailing list"] {
+    background-image: url(../images/contact_mailing-list_over.png);
+}
+.option a[title $="Follow us on Github"] {
+    background: url(../images/contact_github.png) 35px center no-repeat;
+    text-indent: 15px;
+}
+.option a:hover[title $="Follow us on Github"] {
+    background-image: url(../images/contact_github_over.png);
+}
+
+.contact .twitter .twitter-item {
+    margin-bottom: 30px;
+}
+.contact .twitter .row {
+    margin-bottom: 0px;
+}
+.contact .twitter .block--container {
+    padding-bottom: 0px;
+}
+
+.contact .twitter h1 {
+    background: url(../images/contact_twitter.png) left top no-repeat;
+    border-bottom: solid 1px #d6d6d6;
+    color: #0d84ae;
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding: 0 0 14px 52px;
+}
+.contact .twitter h2 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    font-size: 1.5rem;
+    line-height: 17px;
+}
+.contact .twitter a {
+    color: #0d84ae;
+    font-size: 2.25rem;
+    text-decoration: none;
+}
+
+.contact .twitter iframe {
+    float: right;
+    position: relative;
+    margin-right: 50px;
+    top: 4px;
+}
