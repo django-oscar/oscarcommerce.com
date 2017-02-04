@@ -10,7 +10,7 @@ container_class: cases
         <div class="block--container block--container-white block--container-large">
             <p>
                 Oscar is used in production by a range of companies, from large multinationals to small,
-                boutique stores. 
+                boutique stores.
             </p>
         </div>
     </div>
@@ -20,9 +20,17 @@ container_class: cases
     {% for item in site.data.sites %}
     <div class="col-md-4 col-sm-6">
         <div class="project-card">
+            {% if item.url %}
             <a href="{{ item.url }}"><img src="{{ item.screenshot }}"></a>
+            {% else %}
+            <img src="{{ item.screenshot }}">
+            {% endif %}
             <span>
+                {% if item.url %}
                 <a href="{{ item.url }}">{{ item.name }}</a>
+                {% else %}
+                {{ item.name }}
+                {% endif %}
             </span>
             {% if item.agency %}
             <span class="item-agency">
