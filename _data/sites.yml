@@ -25,3 +25,7 @@
 
 - name: Dadagraphix
   screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/dadagraphix.thumb.png
+
+- name: Hier Und Jetzt
+  url: https://www.hierundjetzt.ch/
+  screenshot: https://github.com/django-oscar/django-oscar/raw/master/docs/images/screenshots/hier-und-jetzt.thumb.png
